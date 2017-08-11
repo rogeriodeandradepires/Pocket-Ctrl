@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="@dimen/padding_common"
+            android:paddingRight="@dimen/padding_common">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <design.appstudio.BudgetCtrl.customfonts.gotham.GothamBookLittleBoldTextView
+                    style="@style/AppTheme.Label"
+                    android:layout_marginTop="30dp"
+                    android:text="11 AGO"
+                    android:textColor="@color/colorTextContent"
+                    android:textSize="16sp"/>
+
+                <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                    style="@style/AppTheme.Label"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="21:44"
+                    android:textColor="@color/colorTextContent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_common"
+                android:layout_marginRight="@dimen/padding_common"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="@dimen/division_line"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorTextContent"/>
+
+                <com.flyco.roundview.RoundFrameLayout
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    app:rv_isRadiusHalfHeight="true"
+                    app:rv_strokeWidth="@dimen/division_line">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_svg_cat_bill"/>
+                </com.flyco.roundview.RoundFrameLayout>
+
+                <View
+                    android:layout_width="@dimen/division_line"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorTextContent"/>
+            </LinearLayout>
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_common_d"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_common"
+                app:rv_cornerRadius="10dp"
+                app:rv_strokeColor="@color/colorTextContent"
+                app:rv_strokeWidth="@dimen/division_line">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <design.appstudio.BudgetCtrl.customfonts.gotham.GothamBoldTextView
+                        android:id="@+id/txvCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="Categoria"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_svg_cat_bill"/>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_svg_cat_bill"/>
+
+                </LinearLayout>
+
+
+
+                <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                    android:id="@+id/txvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="Descrição"
+                    android:textColor="@color/colorTextContent"
+                    android:textColorHint="@color/colorTextContent"
+                    android:textSize="18sp"/>
+
+                <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                    android:id="@+id/txvValor"
+                    style="@style/AppTheme.Label.Title"
+                    android:layout_gravity="center_vertical"
+                    android:hint="R$ 0,00"
+                    android:textColor="@color/colorTextContent"
+                    android:textColorHint="@color/colorTextContent"
+                    android:textSize="18sp"
+                    />
+
+                <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                    android:id="@+id/txvVencimento"
+                    style="@style/AppTheme.Label.Title"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:text="Vencimento: 11/08/2017"
+                    android:textColor="@color/colorTextContent"
+                    android:textColorHint="@color/colorTextContent"
+                    android:textSize="14sp"/>
+
+            </com.flyco.roundview.RoundLinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

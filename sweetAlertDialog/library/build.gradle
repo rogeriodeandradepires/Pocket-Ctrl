@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+//group = GROUP
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 9
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile 'com.pnikosis:materialish-progress:1.7'
+    compile project(path: ':dialogWheelView')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_add.png",
+        "source": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_add.png"
+    },
+    {
+        "merged": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_graduation.png",
+        "source": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\dialogWheelView\\build\\intermediates\\bundles\\default\\res\\drawable-xxhdpi-v4\\ic_graduation.png"
+    },
+    {
+        "merged": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_technical.png",
+        "source": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\dialogWheelView\\build\\intermediates\\bundles\\default\\res\\drawable-xxhdpi-v4\\ic_technical.png"
+    },
+    {
+        "merged": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\ic_spinner_arrow.png",
+        "source": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_spinner_arrow.png"
+    }
+]

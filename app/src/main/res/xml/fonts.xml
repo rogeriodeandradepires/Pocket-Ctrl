@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<familyset>
+
+    <!-- Some Font. Can be referenced with 'someFont' or 'aspergit' -->
+    <family>
+        <nameset>
+            <name>gotham</name>
+            <name>any-alias</name>
+        </nameset>
+        <fileset>
+            <file>gotham/Gotham-Bold.otf</file>
+            <file>gotham/Gotham-Book.otf</file>
+            <file>gotham/Gotham-Light.otf</file>
+            <file>gotham/Gotham-Medium.otf</file>
+        </fileset>
+    </family>
+
+    <family>
+        <nameset>
+            <name>Daxpro</name>
+            <name>any-alias</name>
+        </nameset>
+        <fileset>
+            <file>daxpro/DaxPro-Light.otf</file>
+            <file>daxpro/DaxPro-Medium.otf</file>
+            <file>daxpro/DaxPro-Regular.otf</file>
+        </fileset>
+    </family>
+
+    <!-- Another Font. Can be referenced with 'anotherFont' or 'bodoni' -->
+    <family>
+        <nameset>
+            <name>Eras</name>
+            <name>any-alias</name>
+        </nameset>
+        <fileset>
+            <file>ERASBD.TTF</file>
+            <file>ERASDEMI.TTF</file>
+            <file>ERASLGHT.TTF</file>
+            <file>ERASMD.TTF</file>
+        </fileset>
+    </family>
+
+
+        <family>
+            <nameset>
+                <name>aspergit</name>
+                <name>any-alias</name>
+            </nameset>
+            <fileset>
+                <file>aspergit/Aspergit.ttf</file>
+                <file>aspergit/Aspergit Bold.ttf</file>
+                <file>aspergit/Aspergit Italic.ttf</file>
+                <file>aspergit/Aspergit Bold Italic.ttf</file>
+            </fileset>
+        </family>
+
+
+</familyset>

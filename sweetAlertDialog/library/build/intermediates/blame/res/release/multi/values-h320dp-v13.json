@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\roger\\AndroidStudioProjects\\BudgetCtrl\\sweetAlertDialog\\library\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-h320dp-v13\\values-h320dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "C:\\Users\\roger\\.android\\build-cache\\ebe78c4aac9a61be8e4da22ee1c878d37967c45b\\output\\res\\values-h320dp\\values-h320dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 231,
+                        "endColumn": 57,
+                        "endOffset": 284
+                    }
+                }
+            }
+        ]
+    }
+]

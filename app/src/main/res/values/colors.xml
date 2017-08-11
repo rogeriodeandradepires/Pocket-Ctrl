@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/color1Gradient</color>
+    <color name="colorPrimaryDark">@color/color1Gradient</color>
+    <color name="colorAccent">@color/colorFab</color>
+
+    <color name="colorTextContent">#444444</color>
+
+
+    <color name="color1Gradient">#88b455</color>
+    <color name="color2Gradient">#366301</color>
+
+    <color name="colorTransparent">#002c450e</color>
+    <color name="colorFab">#90D13B</color>
+</resources>

@@ -1,0 +1,3 @@
+include ':app',':sweetAlertLibrary',':dialogWheelView'
+
+project(':sweetAlertLibrary').projectDir = new File('sweetAlertDialog/library')
