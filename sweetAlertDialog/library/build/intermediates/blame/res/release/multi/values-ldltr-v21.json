@@ -11,13 +11,13 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "C:\\Users\\roger\\.android\\build-cache\\ebe78c4aac9a61be8e4da22ee1c878d37967c45b\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "file": "C:\\Users\\roger\\.android\\build-cache\\c5b86c78e71c53aec7bf5a54028b217229c5bf87\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 240,
+                        "startOffset": 55,
                         "endColumn": 112,
-                        "endOffset": 348
+                        "endOffset": 163
                     }
                 }
             }

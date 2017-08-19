@@ -1,22 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <include
+        android:id="@+id/incl_app_bar"
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
 
-    <include layout="@layout/fragment_events_cardview"
-             android:layout_height="wrap_content"
-             android:layout_width="wrap_content"
-             tools:layout_editor_absoluteY="0dp"
-             tools:layout_editor_absoluteX="0dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_budgets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/incl_app_bar_footer"
+        android:layout_below="@+id/incl_app_bar"
+        android:background="@drawable/bg_final_menor_outro">
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tl_lv_budget"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView-->
+            <!--android:id="@+id/tv_nada_cadastrado_orcamento"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:gravity="center"-->
+            <!--android:shadowColor="#366301"-->
+            <!--android:shadowDx="3"-->
+            <!--android:shadowDy="3"-->
+            <!--android:shadowRadius="2"-->
+            <!--android:text="Nenhum Orçamento Cadastrado"-->
+            <!--android:textColor="@color/gray_btn_bg_pressed_color"-->
+            <!--android:textSize="35sp"-->
+            <!--android:visibility="gone"/>-->
+
+        <!--<ListView-->
+        <!--android:id="@+id/lv_budget"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"/>-->
+        <!--</RelativeLayout>-->
+
+        <ListView
+            android:id="@+id/lv_budgets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="24dp"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView
+        android:id="@+id/tv_nada_cadastrado_geral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:shadowColor="#366301"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
+        android:text="Nada Cadastrado"
+        android:textColor="@color/gray_btn_bg_pressed_color"
+        android:textSize="40sp"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/tl_lv_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/incl_app_bar_footer">
+
+        <!--<design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView-->
+            <!--android:id="@+id/tv_nada_cadastrado_despesas"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:gravity="center"-->
+            <!--android:shadowColor="#366301"-->
+            <!--android:shadowDx="3"-->
+            <!--android:shadowDy="3"-->
+            <!--android:shadowRadius="2"-->
+            <!--android:text="Nenhuma Despesa Cadastrada"-->
+            <!--android:textColor="@color/gray_btn_bg_pressed_color"-->
+            <!--android:textSize="35sp"-->
+            <!--android:visibility="gone"/>-->
+
+        <!--<ListView-->
+        <!--android:id="@+id/lv_budget"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"/>-->
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/incl_app_bar_footer"
+        layout="@layout/despesas_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/incl_saldo_footer"/>
+
+    <!--<include-->
+    <!--android:id="@+id/incl_app_bar_footer"-->
+    <!--layout="@layout/despesas_title_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_above="@+id/frml_balance_mask"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/frml_balance_mask"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingBottom="3dp"-->
+    <!--android:background="@color/color2Gradient"-->
+    <!--android:layout_above="@+id/incl_saldo_footer"/>-->
+
+    <include
+        android:id="@+id/incl_saldo_footer"
+        layout="@layout/saldo_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
 
 
-</LinearLayout>
+</RelativeLayout>

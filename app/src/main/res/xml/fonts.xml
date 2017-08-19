@@ -17,13 +17,13 @@
 
     <family>
         <nameset>
-            <name>Daxpro</name>
+            <name>daxpro</name>
             <name>any-alias</name>
         </nameset>
         <fileset>
-            <file>daxpro/DaxPro-Light.otf</file>
-            <file>daxpro/DaxPro-Medium.otf</file>
-            <file>daxpro/DaxPro-Regular.otf</file>
+            <file>fonts/daxpro/DaxPro-Light.otf</file>
+            <file>fonts/daxpro/DaxPro-Medium.otf</file>
+            <file>fonts/daxpro/DaxPro-Regular.otf</file>
         </fileset>
     </family>
 

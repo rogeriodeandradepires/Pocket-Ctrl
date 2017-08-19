@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tl_item_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_balance_red_gradienttoolbar"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/btn_show_hide_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_svg_hide"/>
+
+        <design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView
+            android:id="@+id/lbl_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btn_show_hide_category"
+            android:hint="observacoes"
+            android:shadowColor="@color/color2Gradient"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="2"
+            android:text="Categoria"
+            android:textColor="#FFF"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/frml_btn_edit_category"
+            android:layout_toRightOf="@+id/lbl_category"
+            android:background="@drawable/roundededittext">
+
+            <EditText
+                android:id="@+id/edt_category_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_svg_expense_red"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:shadowColor="#366301"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text=" R$ "
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_categories_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:paddingRight="5dp"
+                android:shadowColor="#366301"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text="0,00"
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_categorys_size_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frml_btn_edit_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/frml_btn_delete_category"
+            android:background="@drawable/bg_btn_add_budget_selector_clicked">
+
+            <FrameLayout
+                android:id="@+id/btn_edit_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_add_budget">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    app:srcCompat="@drawable/ic_svg_add"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frml_btn_delete_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_delete_budget_selector_clicked">
+
+            <FrameLayout
+                android:id="@+id/btn_delete_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_delete_budget">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    app:srcCompat="@drawable/ic_svg_delete"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/pl_card_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/tl_item_title_bar"
+        android:background="@color/error_stroke_color"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/ll_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/rl_card"
+            app:layout_widthPercent="5%">
+
+            <design.appstudio.BudgetCtrl.util.VerticalTextView
+                android:id="@+id/tv_register_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerInParent="true"
+                android:text="Despesa"
+                android:textAllCaps="true"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white"
+            app:layout_widthPercent="95%">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="@dimen/padding_common"
+                android:paddingRight="@dimen/padding_common">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <design.appstudio.BudgetCtrl.customfonts.gotham.GothamBookLittleBoldTextView
+                        android:id="@+id/tv_dateRegOrUp"
+                        style="@style/AppTheme.Label"
+                        android:layout_marginTop="10dp"
+                        android:text="11 AGO"
+                        android:textColor="@color/colorTextContent"
+                        android:textSize="16sp"/>
+
+                    <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                        android:id="@+id/tv_timeRegOrUp"
+                        style="@style/AppTheme.Label"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="21:44"
+                        android:textColor="@color/colorTextContent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/padding_common"
+                    android:layout_marginRight="@dimen/padding_common"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/division_line"
+                        android:layout_height="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorTextContent"/>
+
+                    <com.flyco.roundview.RoundFrameLayout
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        app:rv_isRadiusHalfHeight="true"
+                        app:rv_strokeWidth="@dimen/division_line">
+
+                        <ImageView
+                            android:id="@+id/item_category_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/app_name"
+                            app:srcCompat="@drawable/ic_svg_cat_bill"/>
+                    </com.flyco.roundview.RoundFrameLayout>
+
+                    <View
+                        android:layout_width="@dimen/division_line"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorTextContent"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_common_d"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_rltl_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_common">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--<FrameLayout-->
+                        <!--android:id="@+id/frml_imgBtn_edit_expense"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_toLeftOf="@+id/frml_imgBtn_delete_expense"-->
+                        <!--android:background="@drawable/bg_btn_transparent_budget_selector_clicked">-->
+
+                        <!--<FrameLayout-->
+                        <!--android:id="@+id/imgBtn_edit_expense"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:background="@drawable/btn_transparent_budget">-->
+
+                        <ImageView
+                            android:id="@+id/edit_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/delete_icon"
+                            app:srcCompat="@drawable/ic_svg_edit_black"/>
+
+
+                        <!--</FrameLayout>-->
+
+                        <!--</FrameLayout>-->
+
+                        <!--<ImageButton-->
+                        <!--android:id="@+id/imgBtn_edit_expense"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_toLeftOf="@+id/imgBtn_delete_expense"-->
+                        <!--android:contentDescription="@string/app_name"-->
+                        <!--app:srcCompat="@drawable/ic_svg_cat_bill"/>-->
+
+                        <!--<FrameLayout-->
+                        <!--android:id="@+id/frml_imgBtn_delete_expense"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@drawable/bg_btn_transparent_budget_selector_clicked">-->
+
+                        <!--<FrameLayout-->
+                        <!--android:id="@+id/imgBtn_delete_expense"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        android:background="@drawable/btn_transparent_budget">
+
+                        <ImageView
+                            android:id="@+id/delete_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            app:srcCompat="@drawable/ic_svg_trash"/>
+
+
+                        <!--</FrameLayout>-->
+
+                        <!--</FrameLayout>-->
+
+                        <!--<ImageButton-->
+                        <!--android:id="@+id/imgBtn_delete_expense"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:contentDescription="@string/app_name"-->
+                        <!--app:srcCompat="@drawable/ic_svg_cat_bill"/>-->
+
+                    </RelativeLayout>
+
+                    <design.appstudio.BudgetCtrl.customfonts.gotham.GothamBoldTextView
+                        android:id="@+id/txvCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:hint="Categoria"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="14sp"/>
+
+
+                    <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                        android:id="@+id/txvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/txvCategory"
+                        android:layout_gravity="center_vertical"
+                        android:hint="Descrição"
+                        android:textColor="@color/colorTextContent"
+                        android:textColorHint="@color/colorTextContent"
+                        android:textSize="18sp"/>
+
+                    <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                        android:id="@+id/txvValor"
+                        style="@style/AppTheme.Label.Title"
+                        android:layout_below="@+id/txvDescription"
+                        android:layout_gravity="center_vertical"
+                        android:hint="R$ 0,00"
+                        android:textColor="@color/colorTextContent"
+                        android:textColorHint="@color/colorTextContent"
+                        android:textSize="18sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvValor">
+
+                        <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                            android:id="@+id/txvLblVencimento"
+                            style="@style/AppTheme.Label.Title"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:text="Vencimento: "
+                            android:textColor="@color/colorTextContent"
+                            android:textColorHint="@color/colorTextContent"
+                            android:textSize="14sp"/>
+
+                        <design.appstudio.BudgetCtrl.customfonts.gotham.GothamLightTextView
+                            android:id="@+id/txvVencimentoDate"
+                            style="@style/AppTheme.Label.Title"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:text="11/08/2017"
+                            android:textColor="@color/colorTextContent"
+                            android:textColorHint="@color/colorTextContent"
+                            android:textSize="14sp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

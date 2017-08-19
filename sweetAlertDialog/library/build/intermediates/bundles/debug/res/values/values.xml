@@ -1,28 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="tab_colors">
+        <item name="tab_1">#455C65</item>
+        <item name="tab_2">#529601</item>
+        <item name="tab_3">#8B6B62</item>
+        <item name="tab_4">#e6b930</item>
+        <item name="tab_5">#f65a2b</item>
+    </array>
+    <color name="backupcolorAccentTrans">#64ee3d43</color>
+    <color name="base">#fe7920</color>
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_main">#428bca</color>
+    <color name="bg_register">#026306</color>
     <color name="blue_btn_bg_color">#AEDEF4</color>
     <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="btn_login">#26ae90</color>
     <color name="btn_login_bg">#eceef1</color>
+    <color name="btn_logut_bg">#ff6861</color>
     <color name="button_text_color">#FFFFFF</color>
     <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="color1Gradient">#88b455</color>
+    <color name="color2Gradient">#366301</color>
+    <color name="colorAccent">#f2fe71</color>
+    <color name="colorAccentTrans">#80ff9e61</color>
+    <color name="colorActiveSmall">#FFFFFF</color>
+    <color name="colorBackgroundSemiTransp">#B3c4dea5</color>
+    <color name="colorBasketballSelected">#E65100</color>
+    <color name="colorBlackTrans">#a0000000</color>
+    <color name="colorBoxBackground">#7fdaf1bc</color>
+    <color name="colorButton">#2c450e</color>
+    <color name="colorButtonDark">#6a1b9a</color>
+    <color name="colorCalendar">#648cc63f</color>
+    <color name="colorDarkGreen">#366301</color>
+    <color name="colorDivison">#33aaaaaa</color>
+    <color name="colorFab">#90d13b</color>
+    <color name="colorFootballSelected">#827717</color>
+    <color name="colorFormEditText">#80b53a</color>
+    <color name="colorFormEditTextFade">#B380b53a</color>
+    <color name="colorGreenBackground">#c4dea5</color>
+    <color name="colorGrey">#E7E8E6</color>
+    <color name="colorInactive">#747474</color>
+    <color name="colorInactiveSmall">#50FFFFFF</color>
+    <color name="colorInactiveStep">#cccccc</color>
+    <color name="colorNext">#30FF9800</color>
+    <color name="colorPicture">#D98cc63f</color>
+    <color name="colorPrimary">#8cc63f</color>
+    <color name="colorPrimaryDark">#80b53a</color>
+    <color name="colorPrimaryTrans">#808cc63f</color>
+    <color name="colorRedHighlight">#f90c00</color>
+    <color name="colorSideNavigation1">#00000000</color>
+    <color name="colorSideNavigation2">#BF8cc63f</color>
+    <color name="colorSideNavigation3">#8cc63f</color>
+    <color name="colorStrongGreen">#529601</color>
+    <color name="colorTennis">#03A9F4</color>
+    <color name="colorTennisSelected">#01579B</color>
+    <color name="colorTextAssistant">#888888</color>
+    <color name="colorTextContent">#444444</color>
+    <color name="colorTransparent">#002c450e</color>
+    <color name="colorVisited">#F57C00</color>
+    <color name="colorWhite">#64ffffff</color>
+    <color name="color_events">#26529601</color>
+    <color name="color_favorites">#26fbd55f</color>
+    <color name="color_home">#26618ea0</color>
+    <color name="color_notification_back">#ffcd33</color>
+    <color name="color_notification_text">#3E4757</color>
+    <color name="color_notifications">#26f2fe71</color>
+    <color name="color_tab_1">#455C65</color>
+    <color name="color_tab_2">#00886A</color>
+    <color name="color_tab_3">#8B6B62</color>
+    <color name="color_tab_4">#6C4A42</color>
+    <color name="color_tab_5">#f65a2b</color>
+    <color name="contentTextColor">#DD000000</color>
+    <color name="darkColorPrimary">#424242</color>
+    <color name="darkColorPrimaryDark">#000000</color>
     <color name="error_stroke_color">#F27474</color>
     <color name="float_transparent">#00000000</color>
     <color name="gray_btn_bg_color">#D0D0D0</color>
     <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="input_login">#ffffff</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="lbl_name">#333333</color>
     <color name="material_blue_grey_80">#ff37474f</color>
     <color name="material_blue_grey_90">#ff263238</color>
     <color name="material_blue_grey_95">#ff21272b</color>
     <color name="material_deep_teal_20">#ff80cbc4</color>
     <color name="material_deep_teal_50">#ff009688</color>
     <color name="ms_black">#000000</color>
+    <color name="navigationBarColor">#2c450e</color>
     <color name="red_btn_bg_color">#DD6B55</color>
     <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="semiTransparentWhite">#40FFFFFF</color>
     <color name="success_stroke_color">#A5DC86</color>
     <color name="success_stroke_color_pressed">#95e966</color>
     <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="tab_background_selected">#529601</color>
+    <color name="tab_background_unselected">#366301</color>
     <color name="text_color">#575757</color>
     <color name="trans_success_stroke_color">#33A5DC86</color>
     <color name="warning_stroke_color">#F8BB86</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteRoundedBackground">#99ffffff</color>
     <declare-styleable name="Rotate3dAnimation"><attr format="enum" name="rollType">
             <enum name="x" value="0"/>
             <enum name="y" value="1"/>
@@ -37,6 +117,15 @@
     <string name="dialog_default_title">Here\'s a message!</string>
     <string name="dialog_ok">OK</string>
     <string name="status">SweetAlertDialog</string>
+    <style name="TextLabel" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">#FFF</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">#BF8cc63f</item>
+        <item name="colorControlNormal">#BF8cc63f</item>
+        <item name="colorControlActivated">#BF8cc63f</item>
+    </style>
     <style name="alert_dialog" parent="android:Theme.Dialog">
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">false</item>

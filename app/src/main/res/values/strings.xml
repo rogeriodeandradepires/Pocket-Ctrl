@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Exp Control</string>
+    <string name="app_name">Budget Ctrl</string>
     <string name="fechar">Fechar</string>
     <string name="close_button_description">close_button</string>
     <string name="button_power">button_power</string>
+
+    <string name="font_name_fontawesome">fontawesome</string>
+    <string name="font_name_source_sans_pro">SourceSansPro</string>
 </resources>

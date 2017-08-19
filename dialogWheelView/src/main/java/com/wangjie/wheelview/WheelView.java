@@ -188,13 +188,102 @@ public class WheelView extends ScrollView {
         tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
         tv.setText(item);
 
-        if (tv.getText().equals("Técnico")) {
-            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.new_technical_sm, 0, 0, 0);
+        tv.setCompoundDrawablePadding(25);
+
+        if(tv.getText().equals("Água")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_water_bill, 0, 0, 0);
         }
 
-        if (tv.getText().equals("Superior")) {
-            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.new_graduation_sm, 0, 0, 0);
-//            tv.setCompoundDrawablePadding(15);
+        if(tv.getText().equals("Cartão")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_credit_card2, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Casa")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_casa, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Combustível")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_fuel, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Contas")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_bill, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Cosméticos")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_cosmetics, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Dependentes")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_dependent, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Diversão")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_leisure, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Educação")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_education, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Eletrônicos")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_eletronicos, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Empréstimo")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_loan, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Energia")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_energy, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Esportes")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_sports, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Mercado")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_supermercado, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Pets")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_pets, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Poupança")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_money_saving, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Presente")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_gift, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Salário")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_salary, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Saúde")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_health, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Serviços")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_servicos, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Transporte")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_transport, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Vestuário")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_vestuario, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Viagem")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_travel, 0, 0, 0);
+        }
+
+        if(tv.getText().equals("Outros")){
+            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_svg_cat_outros, 0, 0, 0);
         }
 
 
@@ -293,13 +382,21 @@ public class WheelView extends ScrollView {
             if (position == i) {
                 //azul
 //                itemView.setTextColor(Color.parseColor("#0288ce"));
-                itemView.setTextColor(Color.parseColor("#80b53a"));
-                highlightIcons(itemView);
+                itemView.setTextColor(Color.parseColor("#C8444444"));
+                Drawable[] drawable = itemView.getCompoundDrawables();
+                if (drawable[0]!=null) {
+                    drawable[0].setAlpha(255);
+                }
+//                highlightIcons(itemView);
 
             } else {
                 //cinza
-                itemView.setTextColor(Color.parseColor("#c4dea5"));
-                fadeIcons(itemView);
+                itemView.setTextColor(Color.parseColor("#64444444"));
+                Drawable[] drawable = itemView.getCompoundDrawables();
+                if (drawable[0]!=null) {
+                    drawable[0].setAlpha(80);
+                }
+//                fadeIcons(itemView);
             }
 
         }

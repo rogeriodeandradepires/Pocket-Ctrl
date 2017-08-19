@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Fonts">
+        <!-- using android's -->
+        <attr name="android:textStyle" />
+        <!-- our custom attribute -->
+        <attr name="font" format="string" />
+    </declare-styleable>
+</resources>

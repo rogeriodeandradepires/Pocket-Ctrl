@@ -23,4 +23,112 @@
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="btn_login_bg">#eceef1</color>
     <color name="ms_black">#000000</color>
+
+    <color name="colorPrimary">#8cc63f</color>
+    <color name="colorCalendar">#648cc63f</color>
+    <!--<color name="colorPrimary">#00bcd4</color>-->
+    <color name="colorPrimaryDark">#80b53a</color>
+    <!--<color name="colorAccent">#BF8cc63f</color>-->
+    <color name="colorAccent">#f2fe71</color>
+
+    <color name="semiTransparentWhite">#40FFFFFF</color>
+
+    <color name="colorTextContent">#444444</color>
+    <color name="colorTextAssistant">#888888</color>
+
+    <color name="colorDivison">#33aaaaaa</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#026306</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#ffffff</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+
+    <color name="colorPrimaryTrans">#808cc63f</color>
+    <color name="colorAccentTrans">#80ff9e61</color>
+    <color name="backupcolorAccentTrans">#64ee3d43</color>
+    <color name="colorBlackTrans">#a0000000</color>
+    <color name="colorVisited">#F57C00</color>
+    <color name="colorNext">#30FF9800</color>
+    <color name="colorWhite">#64ffffff</color>
+
+    <color name="color_home">#26618ea0</color>
+    <color name="color_favorites">#26fbd55f</color>
+    <color name="color_events">#26529601</color>
+    <color name="color_notifications">#26f2fe71</color>
+
+    <color name="colorPicture">#D98cc63f</color>
+
+    <color name="colorSideNavigation1">#00000000</color>
+    <color name="colorSideNavigation2">#BF8cc63f</color>
+    <color name="colorSideNavigation3">#8cc63f</color>
+    <color name="colorGreenBackground">#c4dea5</color>
+
+    <color name="colorInactiveStep">#cccccc</color>
+
+    <color name="color1Gradient">#88b455</color>
+    <color name="color2Gradient">#366301</color>
+    <color name="colorBoxBackground">#7fdaf1bc</color>
+    <color name="colorBackgroundSemiTransp">#B3c4dea5</color>
+    <color name="whiteRoundedBackground">#99ffffff</color>
+    <color name="colorButton">#2c450e</color>
+    <color name="colorTransparent">#002c450e</color>
+    <color name="colorFab">#90d13b</color>
+    <color name="colorGrey">#E7E8E6</color>
+
+    <color name="colorFormEditText">#80b53a</color>
+    <color name="colorFormEditTextFade">#B380b53a</color>
+
+    <color name="colorStrongGreen">#529601</color>
+    <color name="colorDarkGreen">#366301</color>
+    <color name="navigationBarColor">#2c450e</color>
+    <color name="tab_background_selected">#529601</color>
+    <color name="tab_background_unselected">#366301</color>
+    <color name="base">#fe7920</color>
+
+    <color name="colorInactive">#747474</color>
+    <color name="colorActiveSmall">#FFFFFF</color>
+    <color name="colorInactiveSmall">#50FFFFFF</color>
+
+    <color name="color_tab_1">#455C65</color>
+    <color name="color_tab_2">#00886A</color>
+    <color name="color_tab_3">#8B6B62</color>
+    <color name="color_tab_4">#6C4A42</color>
+    <color name="color_tab_5">#f65a2b</color>
+
+    <color name="colorRedHighlight">#f90c00</color>
+
+    <color name="color_notification_back">#ffcd33</color>
+    <color name="color_notification_text">#3E4757</color>
+
+    <array name="tab_colors">
+        <item name="tab_1">#455C65</item>
+        <item name="tab_2">#529601</item>
+        <item name="tab_3">#8B6B62</item>
+        <item name="tab_4">#e6b930</item>
+        <item name="tab_5">#f65a2b</item>
+    </array>
+
+    <!--<color name="colorButton">#8E24AA</color>-->
+    <color name="colorButtonDark">#6a1b9a</color>
+
+    <color name="darkColorPrimary">#424242</color>
+    <color name="darkColorPrimaryDark">#000000</color>
+
+    <color name="contentTextColor">#DD000000</color>
+
+    <!--<color name="colorFootball">#cddc39</color>-->
+    <color name="colorFootballSelected">#827717</color>
+    <!--<color name="colorBasketball">#FFC107</color>-->
+    <color name="colorBasketballSelected">#E65100</color>
+    <color name="colorTennis">#03A9F4</color>
+    <color name="colorTennisSelected">#01579B</color>
+
 </resources>

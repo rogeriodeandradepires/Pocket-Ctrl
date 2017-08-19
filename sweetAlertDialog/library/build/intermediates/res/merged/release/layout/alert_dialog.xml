@@ -25,7 +25,7 @@
             android:textSize="35sp"
             android:visibility="invisible"/>
 
-        </FrameLayout>
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/custom_image_frame"
@@ -248,6 +248,14 @@
         android:layout_height="wrap_content"
         android:visibility="gone"/>
 
+    <include
+        android:id="@+id/incl_form"
+        layout="@layout/layout_create_new_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"/>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:id="@+id/error_report_include"
                   android:layout_width="wrap_content"
@@ -279,50 +287,50 @@
     <!--android:visibility="gone">-->
 
     <!--<ListView-->
-        <!--android:id="@+id/stepper_spinner_listView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:visibility="gone">-->
+    <!--android:id="@+id/stepper_spinner_listView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone">-->
 
     <!--</ListView>-->
 
     <!--<TableRow xmlns:android="http://schemas.android.com/apk/res/android"-->
-              <!--android:id="@+id/stepperFormInclude"-->
-              <!--android:layout_width="match_parent"-->
-              <!--android:layout_height="wrap_content"-->
-              <!--android:layout_marginBottom="10dp"-->
-              <!--android:layout_marginTop="10dp"-->
-              <!--android:visibility="gone">-->
+    <!--android:id="@+id/stepperFormInclude"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:visibility="gone">-->
 
-        <!--<Spinner-->
-            <!--android:id="@+id/spinnerTerm"-->
-            <!--style="@style/spinner_style"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="5"-->
-            <!--android:focusable="true"-->
-            <!--android:popupBackground="#cccccc"/>-->
+    <!--<Spinner-->
+    <!--android:id="@+id/spinnerTerm"-->
+    <!--style="@style/spinner_style"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="5"-->
+    <!--android:focusable="true"-->
+    <!--android:popupBackground="#cccccc"/>-->
 
-        <!--<Spinner-->
-            <!--android:id="@+id/spinnerSubject"-->
-            <!--style="@style/spinner_style"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="5dp"-->
-            <!--android:layout_weight="5"-->
-            <!--android:focusable="true"-->
-            <!--android:popupBackground="#cccccc"/>-->
+    <!--<Spinner-->
+    <!--android:id="@+id/spinnerSubject"-->
+    <!--style="@style/spinner_style"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_weight="5"-->
+    <!--android:focusable="true"-->
+    <!--android:popupBackground="#cccccc"/>-->
 
 
-        <!--<ImageButton-->
-            <!--android:id="@+id/addSubjectToList"-->
-            <!--android:layout_width="35dp"-->
-            <!--android:layout_height="35dp"-->
-            <!--android:background="@drawable/button_iniciar"-->
-            <!--android:paddingLeft="3dp"-->
-            <!--android:paddingTop="1dp"-->
-            <!--android:scaleType="matrix"-->
-            <!--android:src="@drawable/ic_add"/>-->
+    <!--<ImageButton-->
+    <!--android:id="@+id/addSubjectToList"-->
+    <!--android:layout_width="35dp"-->
+    <!--android:layout_height="35dp"-->
+    <!--android:background="@drawable/button_iniciar"-->
+    <!--android:paddingLeft="3dp"-->
+    <!--android:paddingTop="1dp"-->
+    <!--android:scaleType="matrix"-->
+    <!--android:src="@drawable/ic_add"/>-->
 
     <!--</TableRow>-->
 

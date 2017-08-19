@@ -1,11 +1,13 @@
 package cn.pedant.SweetAlert;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.TextInputEditText;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,24 +18,25 @@ import android.view.animation.Transformation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.pnikosis.materialishprogress.ProgressWheel;
 import com.wangjie.wheelview.WheelView;
 
-import java.util.Arrays;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import cn.pedant.SweetAlert.util.MyCustomTextView;
 
-public class SweetAlertDialog extends Dialog implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    private static final String[] CourseNames = new String[]{};
-    private static final String[] CourseTypes = new String[]{"Técnico", "Superior"};
+public class SweetAlertDialog extends Dialog implements View.OnClickListener, AdapterView.OnItemSelectedListener, DatePickerDialog.OnDateSetListener {
     public static final int NORMAL_TYPE = 0;
     public static final int ERROR_TYPE = 1;
     public static final int SUCCESS_TYPE = 2;
@@ -55,7 +58,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
     private TextView mContentTextView;
     private MyCustomTextView mProgressText;
     private String mTitleText;
-    private String mStringArray[];
+    private List<String> mStringArray;
     private Spinner mSpinnerArray[];
     private List<String> mListStringTerms, mListStringSubjects;
     private String mContentText;
@@ -85,11 +88,22 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
     private WheelView wv;
     private View layout_error_report;
     private View classView;//, layout_stepper_form;
+
+    private RelativeLayout rl_form;
+    private TextInputEditText edt_form_category;
+    private TextInputEditText edt_form_description;
+    private TextInputEditText edt_form_value;
+    private TextInputEditText edt_form_date;
+
     private EditText edt_message;
     private ArrayAdapter<String> dataAdapterTerm, dataAdapterSubject;
     private Spinner spinnerTerm, spinnerSubject;
     //    private EditText edt_error_log, edt_message;
     private Button btn_send_error, btn_cancel;
+
+    private DatePickerDialog datePickerDialog;
+
+    private Context globalContext;
 
     public SweetAlertDialog(Context context) {
         this(context, NORMAL_TYPE);
@@ -97,6 +111,8 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
 
     public SweetAlertDialog(Context context, int alertType) {
         super(context, R.style.alert_dialog);
+
+        globalContext = context;
         setCancelable(true);
         setCanceledOnTouchOutside(false);
         mProgressHelper = new ProgressHelper(context);
@@ -185,27 +201,25 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
         mConfirmButton.setOnClickListener(this);
         mCancelButton.setOnClickListener(this);
 
-//        mButton = (ImageButton) findViewById(R.id.addSubjectToList);
-//        lstVstepper_spinner = (ListView) findViewById(R.id.stepper_spinner_listView);
+        rl_form = (RelativeLayout) findViewById(R.id.incl_form);
+        edt_form_category = (TextInputEditText)findViewById(R.id.edt_category);
+        edt_form_description = (TextInputEditText)findViewById(R.id.edt_description);
+        edt_form_value = (TextInputEditText)findViewById(R.id.edt_valor);
+        edt_form_date = (TextInputEditText)findViewById(R.id.edt_vencimento);
+
+        long date = System.currentTimeMillis();
+
+        SimpleDateFormat sdfYear = new SimpleDateFormat("yyyy");
+        int dateStringYear = Integer.valueOf(sdfYear.format(date));
+        SimpleDateFormat sdfMonth = new SimpleDateFormat("MM");
+        int dateStringMonth = Integer.valueOf(sdfMonth.format(new Date())) - 1;
+        SimpleDateFormat sdfDay = new SimpleDateFormat("dd");
+        int dateStringDay = Integer.valueOf(sdfDay.format(date));
+
+        datePickerDialog = new DatePickerDialog(globalContext, this, dateStringYear, dateStringMonth, dateStringDay);
 
         wv = (WheelView) findViewById(R.id.sweetAlert_wheel_view_wv);
         layout_error_report = findViewById(R.id.error_report_include);
-//        layout_stepper_form = findViewById(R.id.stepperFormInclude);
-
-//        layout_stepper_form.setVisibility(View.VISIBLE);
-//        Toast.makeText(getContext(), "Setou visivel", Toast.LENGTH_SHORT).show();
-
-//        wv.setOffset(2);
-//        wv.setItems(Arrays.asList(CourseTypes));
-//        wv.setSeletion(3);
-//        wv.setOn
-//
-// ViewListener(new WheelView.OnWheelViewListener() {
-//            @Override
-//            public void onSelected(int selectedIndex, String item) {
-////                Log.d(TAG, "[Dialog]selectedIndex: " + selectedIndex + ", item: " + item);
-//            }
-//        });
         setWheelData(mStringArray);
         setSpinnersData(mListStringTerms, mListStringSubjects, "visible");
         setTitleText(mTitleText);
@@ -214,6 +228,26 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
         setConfirmText(mConfirmText);
         changeAlertType(mAlertType, true);
         setProgressText(null);
+
+
+//        edtDayOfEvent.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (hasFocus) {
+//                    formParent.requestFocus();
+//                    datePickerDialog.show();
+//
+//                    datePickerDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+//                        @Override
+//                        public void onDismiss(DialogInterface dialog) {
+//                            formParent.requestFocus();
+////                            edtDayOfEvent.setText();
+//                        }
+//                    });
+//
+//                }
+//            }
+//        });
 
     }
 
@@ -326,17 +360,17 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
         return mProgressText;
     }
 
-    public String[] getWheelData() {
+    public List<String> getWheelData() {
         return mStringArray;
     }
 
-    public SweetAlertDialog setWheelData(String[] data) {
+    public SweetAlertDialog setWheelData(List<String> data) {
         mStringArray = data;
 
         if (wv != null && mStringArray != null) {
             wv.setVisibility(View.VISIBLE);
             wv.setOffset(1);
-            wv.setItems(Arrays.asList(mStringArray));
+            wv.setItems(mStringArray);
             wv.setSeletion(0);
 //            wv.setOnWheelViewListener(new WheelView.OnWheelViewListener() {
 //                @Override
@@ -348,14 +382,6 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
 
         return this;
     }
-
-//    public ImageButton getMButton() {
-//        return mButton;
-//    }
-
-//    public ListView getLstVstepper_spinner() {
-//        return lstVstepper_spinner;
-//    }
 
     public Spinner[] getSpinners() {
         return mSpinnerArray;
@@ -376,18 +402,6 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         if (parent.getItemAtPosition(position) != null) {
             String item = parent.getItemAtPosition(position).toString();
-//            if (parent.getId() == spinnerPlantaId) {
-//                plantaIndex = position;
-//            }
-//
-//            if (parent.getId() == spinnerPragaId) {
-//                pragaIndex = position;
-//            }
-//
-////                    Toast.makeText(parent.getContext(), "Praga Selecionada: " + item, Toast.LENGTH_SHORT).show();
-//            if (parent.getItemAtPosition(position).toString().equals("Nova PlantaTalhao")) {
-//                addPlanta(inflatePlanta());
-//            }
         }
     }
 
@@ -407,16 +421,6 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
 
     public EditText[] getMessages() {
         EditText[] editTexts = new EditText[2];
-
-//        layout_error_report = findViewById(R.id.error_report_include);
-//
-////        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-////        popupView = layoutInflater.inflate(popupType, null);
-//
-//        edt_error_log = (EditText)layout_error_report.findViewById(R.id.sweetAlert_errorLog);
-//        edt_message = (EditText)layout_error_report.findViewById(R.id.sweetAlert_error_newLargeMessage);
-
-//        editTexts[0] = edt_error_log;
         editTexts[0] = edt_message;
 
         return editTexts;
@@ -436,30 +440,11 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
         if (visibility.equals("visible")) {
             if (layout_error_report != null) {
                 layout_error_report.setVisibility(View.VISIBLE);
-//            edt_error_log = (EditText) layout_error_report.findViewById(R.id.sweetAlert_errorLog);
                 edt_message = (EditText) layout_error_report.findViewById(R.id.sweetAlert_error_newLargeMessage);
-//            btn_cancel = (Button) layout_error_report.findViewById(R.id.btn_cancel_report);
-//            btn_send_error = (Button) layout_error_report.findViewById(R.id.btn_send_report);
-//            wv.setOnWheelViewListener(new WheelView.OnWheelViewListener() {
-//                @Override
-//                public void onSelected(int selectedIndex, String item) {
-////                Log.d(TAG, "[Dialog]selectedIndex: " + selectedIndex + ", item: " + item);
-//                }
-//            });
             }
         } else {
             if (layout_error_report != null) {
                 layout_error_report.setVisibility(View.GONE);
-//            edt_error_log = (EditText) layout_error_report.findViewById(R.id.sweetAlert_errorLog);
-//                edt_message = (EditText) layout_error_report.findViewById(R.id.sweetAlert_error_newLargeMessage);
-//            btn_cancel = (Button) layout_error_report.findViewById(R.id.btn_cancel_report);
-//            btn_send_error = (Button) layout_error_report.findViewById(R.id.btn_send_report);
-//            wv.setOnWheelViewListener(new WheelView.OnWheelViewListener() {
-//                @Override
-//                public void onSelected(int selectedIndex, String item) {
-////                Log.d(TAG, "[Dialog]selectedIndex: " + selectedIndex + ", item: " + item);
-//                }
-//            });
             }
         }
 
@@ -617,5 +602,61 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener, Ad
 
     public interface OnSweetClickListener {
         void onClick(SweetAlertDialog sweetAlertDialog);
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        month = month + 1;
+        String dataString = String.valueOf(dayOfMonth > 9 ? dayOfMonth : "0" + dayOfMonth);
+        dataString += (month > 9 ? month : "0" + month);
+        dataString += year;
+
+//        edtDayOfEvent.setText(dataString);
+    }
+
+    public RelativeLayout getRl_form() {
+        return rl_form;
+    }
+
+    public void setRl_form(RelativeLayout rl_form) {
+        this.rl_form = rl_form;
+    }
+
+    public TextInputEditText getEdt_form_category() {
+        return edt_form_category;
+    }
+
+    public void setEdt_form_category(TextInputEditText edt_form_category) {
+        this.edt_form_category = edt_form_category;
+    }
+
+    public TextInputEditText getEdt_form_description() {
+        return edt_form_description;
+    }
+
+    public void setEdt_form_description(TextInputEditText edt_form_description) {
+        this.edt_form_description = edt_form_description;
+    }
+
+    public TextInputEditText getEdt_form_value() {
+        return edt_form_value;
+    }
+
+    public void setEdt_form_value(TextInputEditText edt_form_value) {
+        this.edt_form_value = edt_form_value;
+    }
+
+    public TextInputEditText getEdt_form_date() {
+        return edt_form_date;
+    }
+
+    public void setEdt_form_date(TextInputEditText edt_form_date) {
+        this.edt_form_date = edt_form_date;
+    }
+
+    public void changeFormVisibility(){
+        if (rl_form!=null) {
+            rl_form.setVisibility(rl_form.getVisibility()==View.GONE?View.VISIBLE:View.GONE);
+        }
     }
 }

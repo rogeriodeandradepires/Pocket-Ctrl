@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_balance_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_balance_green_gradienttoolbar"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/saldo_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_svg_chart_two"/>
+
+        <design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView
+            android:id="@+id/lbl_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/saldo_icon"
+            android:shadowColor="@color/color2Gradient"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="2"
+            android:text="Saldo"
+            android:textColor="#20330a"
+            android:textSize="25sp"
+            />
+
+        <design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView
+            android:id="@+id/lbl_balance_mask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/saldo_icon"
+            android:shadowColor="#FFF"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="2"
+            android:text="Despesas"
+            android:textColor="@color/colorTransparent"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rl_balance_buttons"
+            android:layout_toRightOf="@+id/lbl_balance_mask"
+            android:background="@drawable/roundededittext">
+
+            <EditText
+                android:id="@+id/edt_balance_money_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_svg_chart_one"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:shadowColor="#FFF"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text=" R$ "
+                android:textColor="@color/color2Gradient"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_balance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="bottom|right"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingRight="5dp"
+                android:shadowColor="#FFF"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text="0,00"
+                android:textAlignment="gravity"
+                android:textColor="@color/color2Gradient"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_expenses_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <!--<EditText-->
+        <!--android:id="@+id/edt_balance"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_toLeftOf="@+id/rl_balance_buttons"-->
+        <!--android:layout_toRightOf="@+id/lbl_balance_mask"-->
+        <!--android:background="@drawable/roundededittext"-->
+        <!--android:drawableLeft="@drawable/ic_svg_chart_one"-->
+        <!--android:focusable="false"-->
+        <!--android:focusableInTouchMode="false"-->
+        <!--android:gravity="right|center_vertical"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:shadowColor="#FFF"-->
+        <!--android:shadowDx="3"-->
+        <!--android:shadowDy="3"-->
+        <!--android:shadowRadius="2"-->
+        <!--android:text="  R$ 1,00"-->
+        <!--android:textColor="@color/color2Gradient"-->
+        <!--android:textStyle="bold"/>-->
+
+        <TableRow
+            android:id="@+id/rl_balance_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/frml_btn_group_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/frml_btn_start_over"
+                android:layout_weight="10"
+                android:background="@drawable/bg_btn_add_budget_selector_clicked"
+                android:visibility="invisible">
+
+                <FrameLayout
+                    android:id="@+id/btn_edit_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_add_budget">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        app:srcCompat="@drawable/ic_svg_edit"/>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frml_btn_start_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0"
+                android:background="@drawable/bg_btn_delete_budget_selector_clicked">
+
+                <FrameLayout
+                    android:id="@+id/btn_start_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_delete_budget">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        app:srcCompat="@drawable/ic_svg_start_over_new"/>
+
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </TableRow>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

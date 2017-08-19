@@ -8,23 +8,23 @@ package com.pnikosis.materialishprogress;
 
 public final class R {
     public static final class attr {
-        public static final int matProg_barColor = 0x7f01006a;
-        public static final int matProg_barSpinCycleTime = 0x7f01006e;
-        public static final int matProg_barWidth = 0x7f010071;
-        public static final int matProg_circleRadius = 0x7f01006f;
-        public static final int matProg_fillRadius = 0x7f010070;
-        public static final int matProg_linearProgress = 0x7f010072;
-        public static final int matProg_progressIndeterminate = 0x7f010069;
-        public static final int matProg_rimColor = 0x7f01006b;
-        public static final int matProg_rimWidth = 0x7f01006c;
-        public static final int matProg_spinSpeed = 0x7f01006d;
+        public static final int matProg_barColor = 0x7f010115;
+        public static final int matProg_barSpinCycleTime = 0x7f010119;
+        public static final int matProg_barWidth = 0x7f01011c;
+        public static final int matProg_circleRadius = 0x7f01011a;
+        public static final int matProg_fillRadius = 0x7f01011b;
+        public static final int matProg_linearProgress = 0x7f01011d;
+        public static final int matProg_progressIndeterminate = 0x7f010114;
+        public static final int matProg_rimColor = 0x7f010116;
+        public static final int matProg_rimWidth = 0x7f010117;
+        public static final int matProg_spinSpeed = 0x7f010118;
     }
     public static final class string {
-        public static final int app_name = 0x7f060015;
-        public static final int default_progressbar = 0x7f060016;
+        public static final int app_name = 0x7f070022;
+        public static final int default_progressbar = 0x7f070026;
     }
     public static final class styleable {
-        public static final int[] ProgressWheel = { 0x7f010069, 0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d, 0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071, 0x7f010072 };
+        public static final int[] ProgressWheel = { 0x7f010114, 0x7f010115, 0x7f010116, 0x7f010117, 0x7f010118, 0x7f010119, 0x7f01011a, 0x7f01011b, 0x7f01011c, 0x7f01011d };
         public static final int ProgressWheel_matProg_barColor = 1;
         public static final int ProgressWheel_matProg_barSpinCycleTime = 5;
         public static final int ProgressWheel_matProg_barWidth = 8;

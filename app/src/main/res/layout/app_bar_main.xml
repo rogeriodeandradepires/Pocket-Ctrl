@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,53 +8,234 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/main_rltLayoutFechar"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|right"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="20dp"
-        android:elevation="24dp">
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/main_rltLayoutFechar"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_gravity="top|right"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:elevation="24dp">-->
 
-        <ImageView
-            android:id="@+id/btnPower"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            app:srcCompat="@drawable/ic_svg_poweroff"/>
-    </RelativeLayout>
+    <!--<ImageView-->
+    <!--android:id="@+id/btnPower"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--app:srcCompat="@drawable/ic_svg_poweroff"/>-->
+    <!--</RelativeLayout>-->
 
     <!--<android.support.design.widget.AppBarLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@drawable/gradienttoolbar"-->
-        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+    <!--android:id="@+id/appBarLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:elevation="0dp"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
 
-        <!--<android.support.v7.widget.Toolbar-->
-            <!--android:id="@+id/toolbar"-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_gradienttoolbar"
+        app:collapseIcon="@drawable/ic_svg_menu">
+        <!--app:titleTextAppearance="@style/Toolbar.TitleText"-->
+        <!--&gt;-->
+
+        <!--<ImageView-->
             <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="?attr/actionBarSize"-->
-            <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_launcher"/>-->
 
-            <!--<design.appstudio.BudgetCtrl.customfonts.gotham.GothamBookLittleBoldTextView-->
-                <!--android:id="@+id/appTitle"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:background="@color/colorTransparent"-->
-                <!--android:shadowColor="@color/color2Gradient"-->
-                <!--android:shadowDx="3"-->
-                <!--android:shadowDy="3"-->
-                <!--android:shadowRadius="2"-->
-                <!--android:text="@string/app_name"-->
-                <!--android:textSize="30sp"-->
-                <!--android:textStyle="bold"-->
-                <!--android:typeface="monospace"/>-->
+        <design.appstudio.BudgetCtrl.customfonts.eras.ErasDemiTextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:shadowColor="#284a01"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAppTitle"
+            android:textSize="30sp"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+            android:textStyle="bold"/>
 
-
-        <!--</android.support.v7.widget.Toolbar>-->
+    </android.support.v7.widget.Toolbar>
 
     <!--</android.support.design.widget.AppBarLayout>-->
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color2Gradient"
+        android:paddingLeft="5dp"
+        >
 
-</android.support.design.widget.CoordinatorLayout>
+        <ImageView
+            android:id="@+id/budget_icon_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_svg_revenue"/>
+
+        <design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView
+            android:id="@+id/lbl_orcamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/budget_icon_hide"
+            android:shadowColor="#000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="2"
+            android:text="Receitas"
+            android:textColor="#FFF"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/frml_btn_add_budget"
+            android:layout_toRightOf="@+id/lbl_orcamento"
+            android:background="@drawable/roundededittext">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_svg_salary_green"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:shadowColor="#366301"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text=" R$  "
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_budget_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:shadowColor="#366301"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text="0,00"
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_expenses_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_toLeftOf="@+id/frml_btn_add_budget"-->
+            <!--android:layout_toRightOf="@+id/lbl_orcamento"-->
+            <!--android:background="@drawable/roundedaddtext"-->
+            <!--android:drawableLeft="@drawable/ic_svg_salary"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:gravity="right|center_vertical"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:shadowColor="#366301"-->
+            <!--android:shadowDx="3"-->
+            <!--android:shadowDy="3"-->
+            <!--android:shadowRadius="2"-->
+            <!--android:text="  R$ 1,00"-->
+            <!--android:textColor="#FFF"-->
+            <!--android:textStyle="bold"/>-->
+
+        <FrameLayout
+            android:id="@+id/frml_btn_add_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/frml_btn_delete_budget"
+            android:background="@drawable/bg_btn_add_budget_selector_clicked">
+
+            <FrameLayout
+                android:id="@+id/btn_add_budget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_add_budget">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    app:srcCompat="@drawable/ic_svg_add"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frml_btn_delete_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_delete_budget_selector_clicked">
+
+            <FrameLayout
+                android:id="@+id/btn_delete_budget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_delete_budget">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    app:srcCompat="@drawable/ic_svg_delete"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

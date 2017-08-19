@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_despesas_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color1Gradient"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+
+        <ImageView
+            android:id="@+id/expense_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_svg_expense_white"/>
+
+        <design.appstudio.BudgetCtrl.customfonts.daxpro.DaxProLittleBoldTextView
+            android:id="@+id/lbl_despesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/expense_icon"
+            android:shadowColor="@color/color2Gradient"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="2"
+            android:text="Despesas"
+            android:textColor="#FFF"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/frml_btn_add_despesa"
+            android:layout_toRightOf="@+id/lbl_despesa"
+            android:background="@drawable/roundededittext">
+
+            <EditText
+                android:id="@+id/edt_despesas_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_svg_expenses"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:shadowColor="#366301"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text=" R$ "
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_expenses_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:paddingRight="5dp"
+                android:shadowColor="#366301"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:text="0,00"
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_expenses_mask"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frml_btn_add_despesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/frml_btn_delete_despesa"
+            android:background="@drawable/bg_btn_add_budget_selector_clicked">
+
+            <FrameLayout
+                android:id="@+id/btn_add_despesa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_add_budget">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    app:srcCompat="@drawable/ic_svg_add"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frml_btn_delete_despesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_delete_budget_selector_clicked">
+
+            <FrameLayout
+                android:id="@+id/btn_delete_despesa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_delete_budget">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    app:srcCompat="@drawable/ic_svg_delete"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
