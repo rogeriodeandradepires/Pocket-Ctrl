@@ -326,7 +326,6 @@ public class SimpleListAdapter extends BaseAdapter implements DatePickerDialog.O
 
     public class ViewHolder {
 
-
         // ViewHolder holderParameter;
         ViewGroup holderParent;
 

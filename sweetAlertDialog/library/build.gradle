@@ -4,7 +4,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
@@ -17,10 +17,10 @@ android {
 }
 
 dependencies {
-    compile 'com.pnikosis:materialish-progress:1.7'
-    compile project(path: ':dialogWheelView')
-    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile( 'com.android.support:appcompat-v7:25.3.1',
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation project(path: ':dialogWheelView')
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation( 'com.android.support:appcompat-v7:25.3.1',
             'com.android.support:design:25.3.1')
 }

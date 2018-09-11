@@ -8,32 +8,32 @@ package com.pnikosis.materialishprogress;
 
 public final class R {
     public static final class attr {
-        public static int matProg_barColor = 0x7f010115;
-        public static int matProg_barSpinCycleTime = 0x7f010119;
-        public static int matProg_barWidth = 0x7f01011c;
-        public static int matProg_circleRadius = 0x7f01011a;
-        public static int matProg_fillRadius = 0x7f01011b;
-        public static int matProg_linearProgress = 0x7f01011d;
-        public static int matProg_progressIndeterminate = 0x7f010114;
-        public static int matProg_rimColor = 0x7f010116;
-        public static int matProg_rimWidth = 0x7f010117;
-        public static int matProg_spinSpeed = 0x7f010118;
+        public static int matProg_barColor = 0x7f0400e3;
+        public static int matProg_barSpinCycleTime = 0x7f0400e4;
+        public static int matProg_barWidth = 0x7f0400e5;
+        public static int matProg_circleRadius = 0x7f0400e6;
+        public static int matProg_fillRadius = 0x7f0400e7;
+        public static int matProg_linearProgress = 0x7f0400e8;
+        public static int matProg_progressIndeterminate = 0x7f0400e9;
+        public static int matProg_rimColor = 0x7f0400ea;
+        public static int matProg_rimWidth = 0x7f0400eb;
+        public static int matProg_spinSpeed = 0x7f0400ec;
     }
     public static final class string {
-        public static int app_name = 0x7f070022;
-        public static int default_progressbar = 0x7f070026;
+        public static int app_name = 0x7f150021;
+        public static int default_progressbar = 0x7f150025;
     }
     public static final class styleable {
-        public static int[] ProgressWheel = { 0x7f010114, 0x7f010115, 0x7f010116, 0x7f010117, 0x7f010118, 0x7f010119, 0x7f01011a, 0x7f01011b, 0x7f01011c, 0x7f01011d };
-        public static int ProgressWheel_matProg_barColor = 1;
-        public static int ProgressWheel_matProg_barSpinCycleTime = 5;
-        public static int ProgressWheel_matProg_barWidth = 8;
-        public static int ProgressWheel_matProg_circleRadius = 6;
-        public static int ProgressWheel_matProg_fillRadius = 7;
-        public static int ProgressWheel_matProg_linearProgress = 9;
-        public static int ProgressWheel_matProg_progressIndeterminate = 0;
-        public static int ProgressWheel_matProg_rimColor = 2;
-        public static int ProgressWheel_matProg_rimWidth = 3;
-        public static int ProgressWheel_matProg_spinSpeed = 4;
+        public static int[] ProgressWheel = { 0x7f0400e3, 0x7f0400e4, 0x7f0400e5, 0x7f0400e6, 0x7f0400e7, 0x7f0400e8, 0x7f0400e9, 0x7f0400ea, 0x7f0400eb, 0x7f0400ec };
+        public static int ProgressWheel_matProg_barColor = 0;
+        public static int ProgressWheel_matProg_barSpinCycleTime = 1;
+        public static int ProgressWheel_matProg_barWidth = 2;
+        public static int ProgressWheel_matProg_circleRadius = 3;
+        public static int ProgressWheel_matProg_fillRadius = 4;
+        public static int ProgressWheel_matProg_linearProgress = 5;
+        public static int ProgressWheel_matProg_progressIndeterminate = 6;
+        public static int ProgressWheel_matProg_rimColor = 7;
+        public static int ProgressWheel_matProg_rimWidth = 8;
+        public static int ProgressWheel_matProg_spinSpeed = 9;
     }
 }
