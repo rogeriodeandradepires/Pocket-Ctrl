@@ -93,7 +93,6 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/edt_categorys_size_mask"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:visibility="invisible"/>
@@ -171,7 +170,6 @@
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:id="@+id/ll_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="false"

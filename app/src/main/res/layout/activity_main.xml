@@ -16,7 +16,6 @@
         android:layout_alignParentTop="true"/>
 
     <RelativeLayout
-        android:id="@+id/rl_budgets"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/incl_app_bar_footer"
@@ -76,7 +75,6 @@
         android:visibility="invisible"/>
 
     <RelativeLayout
-        android:id="@+id/tl_lv_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/incl_app_bar_footer">

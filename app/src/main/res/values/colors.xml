@@ -16,19 +16,11 @@
     <color name="colorTransparent">#002c450e</color>
 
     <color name="darkRed">#450f0e</color>
-    <color name="lightRed">#CD5B55</color>
     <color name="darkRedForBalance">#630101</color>
     <color name="lightRedForBalance">#b45555</color>
 
-    <color name="darkRed2">#FFB5403A</color>
-    <color name="lightRed2">#FFDEA5A5</color>
-
-    <color name="darkGreen">#80b53a</color>
-    <color name="lightGreen">#c4dea5</color>
-
     <color name="red_btn_bg_pressed_color">#CD5B55</color>
     <color name="error_stroke_color">#F27474</color>
-    <color name="green_stroke_color">#74f274</color>
 
 
     <color name="colorFab">#90D13B</color>

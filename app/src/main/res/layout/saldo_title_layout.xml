@@ -112,7 +112,6 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/edt_expenses_mask"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:visibility="invisible"/>
@@ -151,7 +150,6 @@
             android:orientation="horizontal">
 
             <FrameLayout
-                android:id="@+id/frml_btn_group_expenses"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
@@ -163,7 +161,6 @@
                 android:visibility="invisible">
 
                 <FrameLayout
-                    android:id="@+id/btn_edit_event"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_add_budget">

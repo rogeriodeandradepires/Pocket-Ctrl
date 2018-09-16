@@ -48,7 +48,6 @@
             <!--android:src="@mipmap/ic_launcher"/>-->
 
         <design.appstudio.BudgetCtrl.customfonts.eras.ErasDemiTextView
-            android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorTransparent"
@@ -149,7 +148,6 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/edt_expenses_mask"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:visibility="invisible"/>

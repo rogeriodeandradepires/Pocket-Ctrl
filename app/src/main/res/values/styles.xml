@@ -27,48 +27,6 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.Label.Discription">
-        <item name="android:gravity">top</item>
-        <item name="android:lineSpacingExtra">5dp</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:textSize">@dimen/textsize_content</item>
-        <item name="android:singleLine">false</item>
-    </style>
-
     <dimen name="textsize_content">14sp</dimen>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-    <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="colorPrimary">@color/color1Gradient</item>
-        <item name="colorPrimaryDark">@color/color1Gradient</item>
-        <item name="colorAccent">@color/colorFab</item>
-    </style>
-
-    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
-        <item name="android:textColorPrimary">@color/colorAppTitle</item>
-        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
-        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
-        -->
-    </style>
-
-    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">30sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:shadowColor">#284a01</item>
-        <item name="android:shadowDx">3</item>
-        <item name="android:shadowDy">3</item>
-        <item name="android:shadowRadius">3</item>
-        <item name="android:text">@string/app_name</item>
-        <item name="android:textColor">@color/colorAppTitle</item>
-        <!--<item name="android:typeface">GothamLight</item>-->
-    </style>
 
 </resources>

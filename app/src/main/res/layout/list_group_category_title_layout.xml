@@ -86,7 +86,6 @@
             android:textStyle="bold"/>
 
         <EditText
-            android:id="@+id/edt_categorys_mask"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:visibility="invisible"/>
